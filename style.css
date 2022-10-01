@@ -275,6 +275,11 @@ nav {
     position: relative;
 }
 
+
+.about_left {
+	position: relative;
+}
+
 .about_bg1 {}
 
 .about_left .about_bg1 {
@@ -461,4 +466,232 @@ nav {
 }
 
 /*============ FOOTER END ================= */
+
+
+/*============ Medim Devise REsponsive start ================= */
+
+@media screen and (max-width: 1400px) {
+    .hero_right .hero_bg3 {
+        width: 23rem;
+        height: 23rem;
+    }
+    h1 {
+        font-size: 3.3rem;
+    }
+    .hero {
+        height: 900px;
+    }
+    .hero_frame {
+        width: 14rem;
+    }
+    .hero_frames {
+        top: 100%;
+        left: 11vw;
+    }
+    .gallery_image {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 100%;
+        padding: 0 21px;
+        max-width: 1170px;
+    }
+    .about_right {
+        margin-left: 2.5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .hero_right .hero_bg2{
+        position: relative;
+        width: 100%;
+    }
+    .hero_frames{
+        display : none;
+    }
+
+    .hero_right .hero_bg3{
+        display: none;
+    }
+
+    .about_left .about_bg2{
+        position: relative;
+        width: 100%;
+    }
+
+    .about_left .about_bg3{
+        display: none;
+    }
+    .about_right {
+        margin-left: 1.5rem;
+    }
+
+    .collage_images{
+        animation: change_layout 6s linear infinite ;
+        /* animation: change_color 4s linear infinite; */
+        gap: 0.8rem;
+    }
+    .collage_image{
+        border-width: 0.7rem;
+    }
+    .collage_image img{
+        animation: change_color 4s linear infinite;
+    }
+
+    @keyframes change_color{
+        to{
+            filter: saturate(1) brightness(1);
+        }
+    }
+
+    @keyframes change_layout {
+        0{
+          grid-template-areas: 
+            "a b c"
+            "d e g"
+            "f f g"
+            ;
+        }
+        25%{
+            grid-template-areas: 
+            "c b d"
+            "g f f"
+            "g e a"
+            ;
+        }
+        50%{
+            grid-template-areas: 
+            "c g b"
+            "a g d"
+            "e f f"
+            ;
+        }
+        75%{
+            grid-template-areas: 
+            "g f f"
+            "g a c"
+            "e b d"
+            ;
+        }
+        100%{
+            grid-template-areas: 
+            "a b c"
+            "d e g"
+            "f f g"
+            ;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    h2 {
+        font-size: 3rem;
+      }
+    .hero_container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero_right .hero_bg2 {
+        width: 100%;
+        
+        filter: saturate(1) brightness(1);
+        top: 0;
+        left: 0;
+    }
+    .hero_bg2 {
+        border: 1rem solid var(--color-bg4);
+        top: 0;
+        right: 0;
+        transition: var(--transition);
+    }
+
+    .hero {
+        height: fit-content;
+        padding-bottom: 91px;
+    }
+    .hero .hero_left{
+        order: 1;
+    }
+
+    #about{
+        margin-top: 0;
+        padding: calc(16px * 4) 0;
+    }
+
+    .about_right {
+        margin-left: 0rem;
+    }
+
+    .about_right p{
+        width: 100%;
+        text-align: justify;
+    }
+
+    #gallery{
+        margin-top: 0;
+        padding: calc(16px * 4) 0;
+    }
+
+
+.gallery_images {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	place-items: center;
+}
+
+.gallery_head p{
+    width: 100%;
+}
+
+.gallery_images{
+    grid-template-columns: 1fr;
+}
+
+.container_about {
+	grid-template-columns: repeat(1, 1fr);
+}
+.about_left .about_bg2 {
+	width: 100%;
+	filter: saturate(1) brightness(1);
+    top: 0;
+    left: 0;
+}
+.about_bg2 img{
+    filter: saturate(1) brightness(1);
+}
+.about_bg2 {
+    filter: saturate(1) brightness(1);
+    border: 1rem solid var(--color-bg4);
+    top: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+
+/*  Gallery SectioN */
+
+#collage{
+    margin: 0;
+    padding: calc(15px * 4) 0;
+}
+.collage_head h2{
+    text-align: left;
+}
+.collage_head p{
+    width: 100%;
+    text-align: left;
+}
+
+
+}
+
+
 
